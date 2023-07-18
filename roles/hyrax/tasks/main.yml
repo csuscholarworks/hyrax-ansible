@@ -321,10 +321,18 @@
 - name: Copy fixity check script
   template:
     src: hyrax_fixity_check.sh
-    dest: /etc/cron.weekly/hyrax_fixity_check.sh
+    dest: /etc/cron.daily/hyrax_fixity_check.sh
     owner: root
     group: root
     mode: u=rx,g=,o=
+
+- name: Run release script via cron
+  ansible.builtin.cron:
+    name: "check for releases"
+    minute: "*/5"
+    hour: "*"
+    job: "bash -l -c 'cd /var/www/hyrax/current && ./bin/check_new_release.sh prod {{ release_name }}'"
+    user: root
 
 - name: Ensure the backups directory exists.
   file:
