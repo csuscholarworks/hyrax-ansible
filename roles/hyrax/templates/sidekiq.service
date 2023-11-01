@@ -24,7 +24,7 @@ Group=puma
 # Greatly reduce Ruby memory fragmentation and heap usage
 # https://www.mikeperham.com/2018/04/25/taming-rails-memory-bloat/
 Environment=MALLOC_ARENA_MAX=2
-Environment=PATH={{ ffmpeg_bin_dir }}:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+Environment=PATH={{ ffmpeg_bin_dir }}:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 EnvironmentFile=/var/www/hyrax/.env
 
 [Install]
