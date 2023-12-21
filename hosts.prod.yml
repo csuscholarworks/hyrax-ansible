@@ -1,0 +1,25 @@
+all:
+    hosts:
+        fcrepo:
+            ansible_host: 34.216.129.222
+            ansible_user: ec2-user
+        solr:
+            ansible_host: 34.212.166.149
+            ansible_user: ec2-user
+        hyrax_0:
+            ansible_host: 18.237.165.199
+            ansible_user: ec2-user
+        hyrax_1:
+            ansible_host: 52.36.45.15
+            ansible_user: ec2-user
+        worker:
+            ansible_host: 54.191.158.93
+            ansible_user: ec2-user
+digital_archives:
+    hosts:
+        digital_archives_hyrax_0:
+            ansible_host: 44.228.118.76
+            ansible_user: ec2-user
+        digital_archives_worker:
+            ansible_host: 34.219.91.33
+            ansible_user: ec2-user
